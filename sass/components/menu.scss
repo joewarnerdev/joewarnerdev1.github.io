@@ -1,0 +1,55 @@
+/* 
+tab-port (min-width: 56.25em)
+tab-land (min-width: 64em) 
+big-tab-land (min-width: 75em)
+big-desktop (min-width: 112.5em)
+*/
+
+.menu {
+    &-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top: .5rem solid $color-secondary;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    background-color: $color-primary;
+    margin: 0;
+    padding-top: 2.5rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 2.5rem;
+
+        @include respond(tab-land) {
+            bottom: auto;
+            top: 0rem;
+            border-bottom: .5rem solid $color-secondary;    
+        }
+    }
+
+    &-child {
+        width: 90%;
+        background-color: transparent;
+        display: inline-block;
+        position: relative;
+
+        & a {
+            text-align: center;
+            text-decoration: none;
+        }
+
+        & i {
+            color: $color-secondary;
+            font-size: 3.75rem;
+        }
+
+        & p {
+            color: $color-secondary;
+            font-size: 12px;
+            text-shadow: 1px 1px $color-highlight;
+        }
+    }   
+
+    
+}

@@ -1,0 +1,83 @@
+/* 
+CELL PHONE 
+@media only screen and (max-width: 37.5rem) {}
+
+TABLET PORTRAIT OR LARGER
+@media only screen and (min-width: 56.25rem) {}
+
+TABLET LANDSCAPE OR LARGER
+@media only screen and (min-width: 64rem) {}
+
+BIG TABLET LANDSCAPE OR LARGER 2
+@media only screen and (min-width: 75rem) {}
+
+LAPTOP OR LARGER
+@media only screen and (min-width: 112.5rem) {}
+*/
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #5CDB95;
+}
+
+.menu-container {
+    position: absolute;
+    bottom: 0;
+    border-top: .5rem solid #05386B;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    background-color: #5CDB95;
+    padding-top: 2.5rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 2.5rem;
+}
+
+/* If tablet landscape or larger */
+@media only screen and (min-width: 64rem) {
+    .menu-container {
+        bottom: auto;
+        top: 0rem;
+        border-bottom: .5rem solid #05386B;    
+    }
+}
+
+
+.menu-child {
+    width: 90%;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+}
+
+.menu-child a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu-child i {
+    color: #05386B;
+    font-size: 3.75rem;
+}
+
+.menu-child p {
+    color: #05386B;
+    font-size: 12px;
+    text-shadow: 1px 1px #EDF5E1;
+}

@@ -1,0 +1,194 @@
+/*  MEDIA QUERY MANAGER
+0 - 600px:          Phone
+600 - 900px:        Tablet Portrait
+900 - 1200px:       Tablet Landscape
+[1200 - 1800]       Normal styles apply
+1800px +:           Big Desktop
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+1em = 16px
+*/
+/* 
+CELL PHONE 
+@media only screen and (max-width: 37.5rem) {}
+
+TABLET PORTRAIT OR LARGER
+@media only screen and (min-width: 56.25rem) {}
+
+TABLET LANDSCAPE OR LARGER
+@media only screen and (min-width: 64rem) {}
+
+BIG TABLET LANDSCAPE OR LARGER 2
+@media only screen and (min-width: 75rem) {}
+
+LAPTOP OR LARGER
+@media only screen and (min-width: 112.5rem) {}
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (min-width: 64em) {
+    html {
+      font-size: 56.25%; } }
+  @media (min-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (min-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+.menu {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  background-color: red; }
+  .menu__left {
+    background-color: green;
+    left: 0; }
+  .menu__right {
+    background-color: blue;
+    right: 0; }
+  .menu--icon {
+    font-size: 6rem; }
+  .menu--label {
+    font-size: 2.4rem; }
+
+.site-name {
+  background-color: yellowgreen; }
+
+.item {
+  display: block; }
+  .item--about {
+    background-color: pink; }
+  .item--projects {
+    background-color: purple; }
+  .item--contact {
+    background-color: yellow; }
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px; }
+
+/*  COLUMN SETUP  */
+.col-left {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%; }
+
+.col-right {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%; }
+
+.col:first-child {
+  margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1;
+  /* For IE 6/7 */ }
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+  width: 100%; }
+
+.span_3_of_4 {
+  width: 74.6%; }
+
+.span_2_of_4 {
+  width: 49.2%; }
+
+.span_1_of_4 {
+  width: 23.8%; }
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%; }
+  .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 {
+    width: 100%; } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+* {
+  font-family: 'Lato', sans-serif; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #5CDB95; }
+
+/* 
+tab-port (min-width: 56.25em)
+tab-land (min-width: 64em) 
+big-tab-land (min-width: 75em)
+big-desktop (min-width: 112.5em)
+*/
+.menu-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-top: 0.5rem solid #05386B;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  background-color: #5CDB95;
+  margin: 0;
+  padding-top: 2.5rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 2.5rem; }
+  @media (min-width: 64em) {
+    .menu-container {
+      bottom: auto;
+      top: 0rem;
+      border-bottom: 0.5rem solid #05386B; } }
+
+.menu-child {
+  width: 90%;
+  background-color: transparent;
+  display: inline-block;
+  position: relative; }
+  .menu-child a {
+    text-align: center;
+    text-decoration: none; }
+  .menu-child i {
+    color: #05386B;
+    font-size: 3.75rem; }
+  .menu-child p {
+    color: #05386B;
+    font-size: 12px;
+    text-shadow: 1px 1px #EDF5E1; }

@@ -1,0 +1,135 @@
+
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%;                   // 1rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land) {
+        font-size: 56.25%;             // 1 rem = 9px  9/16 = 56.25
+    }
+    @include respond(tab-port) {
+        font-size: 50%;                // 1 rem = 8px; 8/16 = 50%
+    }
+    @include respond(big-desktop) {
+        font-size: 75%;                // 1 rem = 12pxl 12/16=.75
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}
+
+.menu {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+
+    
+    &__left {
+        background-color: green;
+        left: 0;
+    }
+
+    &__right {
+        background-color: blue;
+        right: 0;
+    }
+
+    &--icon {
+        font-size: 6rem;
+    }
+
+    &--label {
+        font-size: 2.4rem;
+    }
+}
+
+.site-name {
+    background-color: yellowgreen;
+}
+
+.item {
+    display: block; 
+
+    &--about {
+        background-color: pink;
+    }
+
+    &--projects {
+        background-color: purple;
+    }
+
+    &--contact {
+        background-color: yellow;
+    }
+}
+
+/////////////////////////////////////
+// GRID SYSTEM
+/////////////////////////////////////
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col-left {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col-right {
+    display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+	width: 100%;
+}
+.span_3_of_4 {
+	width: 74.6%;
+}
+.span_2_of_4 {
+	width: 49.2%;
+}
+.span_1_of_4 {
+	width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+/////////////////////////////////////
+//
+/////////////////////////////////////
