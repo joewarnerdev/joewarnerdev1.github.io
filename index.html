@@ -9,6 +9,40 @@
     <title>Bottom Menu</title>
 </head>
 <body>
+    <div class="about-container"></div>
+
+    <div class="projects-container"></div>
+
+    <div class="form-container" id="contact">
+        <header>CONTACT ME</header>
+        <form id="form" action="https://formspree.io/mvowqeka" method="POST">
+            <div class="form-element">
+                <label class="form-label">
+                    E-MAIL: 
+                    <input id="email" type="text" name="_replyto" class="form-input">
+                </label>
+            </div>
+
+            <div class="form-element">
+                <label class="form-label">
+                    PHONE:
+                    <input id="phone" type="text" name="phone" class="form-input">
+                </label>
+            </div>
+
+            <div class="form-element">
+                <label class="form-label">
+                    MESSAGE: 
+                    <textarea id="message" name="message" class="form-input"></textarea>
+                </label>
+            </div>
+
+            <div class="form-element">
+                <button id="submit" type="submit" class="form-button">SEND <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </form>
+    </div>
+
     <div class="menu-container">
         <div class="menu-child">
             <a href="#about">
@@ -38,6 +72,8 @@
             </a>
         </div>
     </div>
+
+    <div class="overflow-container"></div> 
     
 </body>
 </html>
