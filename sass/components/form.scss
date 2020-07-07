@@ -1,7 +1,7 @@
 header {
     position: relative;
     color: $color-secondary;
-    margin: 10rem 0 .5rem 0;
+    margin: 10rem 0 0 0;
     font-size: 2.3em;
     text-align: center;
     letter-spacing: 7px;
@@ -9,25 +9,22 @@ header {
 
 #form {
     position: absolute;
-    width: 90vw;
-    margin: 5rem auto 10rem auto;
-    left: 4vw;
-    padding-bottom: 3rem;
-}
-
-.form-element {
-    margin: 5px 0 5px 0;
+    width: 85vw;
+    margin-top: 3rem;
+    padding: 3rem auto 2rem auto;
+    height: 85vh;
 }
 
 .form-label {
     font-size: 1.2rem;
+    color: $color-secondary;
 }
 
 input {
     
-    width: 90vw;
+    width: 90%;
     height: 5rem;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 1rem 0px 1rem;
 
     background: transparent;
     outline: none;
@@ -37,16 +34,15 @@ input {
 
     transition: all 0.3s ease-in-out;
 
-    &:hover {
+    &:hover, &:focus {
         background: $color-primary-light;
-        color: $color-secondary;
     }
 }
 
 textarea {
-    width: 90vw;
-    height: 30rem;
-    padding: 15px;
+    width: 90%;
+    height: 20rem;
+    padding: 1rem;
 
     background: transparent;
     outline: none;
@@ -57,17 +53,15 @@ textarea {
 
     transition: all 0.3s ease-in-out;
 
-    &:hover {
+    &:hover, &:focus {
         background: $color-primary-light;
-        color: $color-secondary;
     }
 }
 
 #submit {
-    width: 90vw;
+    width: 95%;
 
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
 
     color: $color-primary;
 
@@ -81,4 +75,10 @@ textarea {
     &:hover {
         color: $color-highlight;
     }
+}
+
+.form-paragraph {
+    color: $color-secondary;
+    font-size: 1.2rem;
+    text-align: center;
 }

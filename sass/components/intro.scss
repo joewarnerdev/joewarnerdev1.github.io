@@ -1,0 +1,80 @@
+.top-menu-fixed {
+    box-sizing: inherit;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.intro-container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+}
+
+.name {
+    &-container {
+        background: $color-secondary;
+        font-size: 3rem;
+        position: absolute;
+        left: 2.7rem;
+        z-index: 1;
+        transform: translate(0, 27rem);
+        padding: .75rem;
+        box-shadow: -5px 5px $color-highlight;
+        & a {
+            text-decoration: none;
+        }
+    }
+    
+    color: $color-primary;
+}
+
+
+.domain {
+    &-container {
+        position: absolute;
+        font-size: 3rem;
+        right: 0rem;
+        background: $color-secondary;
+        z-index: 1;
+        transform: translate(1.5rem, -7rem);
+        padding: .75rem;
+        box-shadow: 5px 5px $color-highlight;
+    }
+
+    &-text {
+        padding: 10px 0 0px 10px;
+        color: $color-primary;
+    }
+}
+
+.stack {
+    &-container {
+        text-align: center;
+        & i {
+            padding: 1rem;
+            color: $color-secondary;
+            font-size: 5rem;
+            text-shadow:1px 1px $color-highlight;
+        }
+    }
+}
+
+.headshot {
+    &-container {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    &-image {
+    width: 60vw;
+    align-items: center;
+    border-radius: 3%;
+    border: 3px solid $color-primary-light;
+    }
+}

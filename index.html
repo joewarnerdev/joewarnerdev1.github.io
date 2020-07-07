@@ -6,32 +6,63 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet">
-    <title>Bottom Menu</title>
+    <title>joewarner.dev</title>
 </head>
 <body>
-    <div class="about-container"></div>
+    <div class="intro-background">
+        <div class="name-container" id="fullName">
+            <a href="http://joewarner.dev"><span class="name">Joe Warner</span></a>
+        </div>
+        <div class="intro-container" id="intro">
+            <div class="headshot-container">
+                <img src="./images/headshot.jpg" alt="Picture of Joseph Warner" class="headshot-image">
+            </div>
+            
+            <div class="domain-container">
+                <span class="domain-text">Full Stack Developer</span>
+            </div>
 
-    <div class="projects-container"></div>
+            <div class="stack-container">
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-js-square"></i>
+                <i class="fab fa-node"></i>
+                <i class="fab fa-react"></i>
+
+            </div>
+        </div>
+    </div>
+    <div class="about-container" id="about"></div>
+
+    <div class="projects-container" id="projects"></div>
 
     <div class="form-container" id="contact">
-        <header>CONTACT ME</header>
+        <header><strong>CONTACT ME</strong></header>
+        <p class="form-paragraph">I'D LOVE TO DISCUSS OPPORTUNITIES TO WORK TOGETHER.</p>
         <form id="form" action="https://formspree.io/mvowqeka" method="POST">
             <div class="form-element">
-                <label class="form-label">
+                <label class="form-label" for="submitterName">
+                    NAME:
+                    <input id="submitterName" type="text" name="submitterName" class="form-input">
+                </label>
+            </div>
+
+            <div class="form-element">
+                <label class="form-label" for="email">
                     E-MAIL: 
                     <input id="email" type="text" name="_replyto" class="form-input">
                 </label>
             </div>
 
             <div class="form-element">
-                <label class="form-label">
+                <label class="form-label" for="phone">
                     PHONE:
                     <input id="phone" type="text" name="phone" class="form-input">
                 </label>
             </div>
 
             <div class="form-element">
-                <label class="form-label">
+                <label class="form-label" for="message">
                     MESSAGE: 
                     <textarea id="message" name="message" class="form-input"></textarea>
                 </label>
@@ -73,7 +104,6 @@
         </div>
     </div>
 
-    <div class="overflow-container"></div> 
-    
+    <script href="./scripts/fix.js"></script>
 </body>
 </html>
