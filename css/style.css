@@ -206,7 +206,7 @@ textarea {
   width: 60vw;
   align-items: center;
   border-radius: 3%;
-  border: 3px solid #8EE4AF; }
+  filter: drop-shadow(0 0 1.25rem #07529C); }
 
 .about-container {
   width: 80vw; }

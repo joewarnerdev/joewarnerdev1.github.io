@@ -75,6 +75,6 @@
     width: 60vw;
     align-items: center;
     border-radius: 3%;
-    border: 3px solid $color-primary-light;
+    filter: drop-shadow(0 0 1.25rem $color-secondary-light);
     }
 }
